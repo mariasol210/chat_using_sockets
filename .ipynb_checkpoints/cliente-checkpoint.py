@@ -16,9 +16,9 @@ class Cliente():
 		port = int (valor)
         
 		print('Proceso con PID',os.getpid())
-		print('\tHilo PRINCIPAL con  ID:',threading.currentThread().getName())
-		print('\tHilo PRINCIPAL con  PID:',threading.currentThread().isDaemon())
-		print('\tHilos activos ahora mismo: ', threading.active_count())
+		print('Hilo PRINCIPAL con  ID:',threading.currentThread().getName())
+		print('Hilo PRINCIPAL con  PID:',threading.currentThread().isDaemon())
+		print('Hilos activos ahora mismo: ', threading.active_count())
    
 		self.sock = socket.socket()
 		self.sock.connect((str(host), int(port)))

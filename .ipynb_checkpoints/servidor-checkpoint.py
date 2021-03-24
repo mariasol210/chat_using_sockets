@@ -10,10 +10,8 @@ class Servidor():
 		port = int (valor)
         
 		print("\nSu IP actual es: {0} \n".format(socket.gethostbyname(host)))
-        
-		print("\t Proceso con PID es {0} \n".format(os.getpid()))
-		print("\t Hilo principal con ID = {0} \n".format())       
-		print("\t Hilo en modo DAEMON: {0} \n".format(threading.))
+		print("El PID del Hilo es {0} \n".format(os.getpid()))
+		#print("El Hilo es DAEMON: {0} \n".format(threading.))
         
 		self.clientes = []
 		self.sock = socket.socket()
@@ -22,7 +20,6 @@ class Servidor():
 		self.sock.setblocking(False)
 
 		aceptar = threading.Thread(target=self.aceptarC)
-        aceptar.isDa
 		procesar = threading.Thread(target=self.procesarC)
 		
 		aceptar.daemon = True
